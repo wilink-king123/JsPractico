@@ -7,9 +7,41 @@
     <title>Figuras Geometricas | Curso Practico de JavaScript en Platzi</title>
 </head>
 <body>
-    <h1>
-        Figuras geometricas
-    </h1>
+    <header>
+        <h1>
+            Figuras Geometricas
+        </h1>
+        <p>Este es el primer taller del curso practico de JavaScript</p>
+    </header>
+    <section>
+        <h2>calcula el area y perimero de un cuadrado</h2>
+        <form action="">
+            <label for="InputCuadrado">Escribe cuanto mide cada lado de tu cuadrado:</label>
+            <input id="InputCuadrado" type="number">
+            <button type="button" onclick="calcularPerimetroCuadrado()">Get Perimeter</button>
+            <button type="button" onclick="calcularAreaCuadrado()">Get Area</button>
+            </form>
+        <h2>calcula el area y perimero de un Triangulo</h2>
+        <form action="">
+            <label for="Inputlado1">Escribe cuanto mide cada lado de tu triangulo -Lado1:</label>
+            <input id="Inputlado1" type="number">
+            <label for="Inputlado2">Lado 2:</label>
+            <input id="Inputlado2" type="number">
+            <label for="Inputlado3">Base:</label>
+            <input id="Inputlado3" type="number">
+            <label for="Inputlado4">Altura:</label>
+            <input id="Inputlado4" type="number">
+            <button type="button" onclick="calcularPerimetroTriangulo()">Get Perimeter</button>
+            <button type="button" onclick="calcularAreaTriangulo()">Get Area</button>
+            </form>
+        <h2>calcula el area y perimetro de un cuadrado</h2>
+        <form action="">
+            <label for="InputCirculo">Escribe el area del circulo:</label>
+            <input id="InputCirculo" type="number">
+            <button type="button" onclick="calcularPerimetroCirculo()">Get Perimeter</button>
+            <button type="button" onclick="calcularAreaCirculo()">Get Area</button>
+            </form>
+    </section>
     <script src="./figuras.js"></script>
 </body>
 </html>
