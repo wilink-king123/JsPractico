@@ -67,6 +67,11 @@ function AreaCirculo(radio){
 }
 console.groupEnd();
 
+
+function isoscelesHigh(lado,base){
+    return Math.sqrt((lado*lado)-((base/2)*(base/2)));
+}
+
 //Aqui interactuamos con el HTML
 
 // Cuadrado
@@ -85,35 +90,61 @@ function calcularAreaCuadrado(){
     const perimetro = AreaCuadrado(value);
     alert(perimetro);
 }
+
 // Triangulo
-function calcularPerimetro(){
-    const input = document.getElementById("InputCuadrado");
-    const value = input.value;
 
-    const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+function calcularPerimetroTriangulo(){
+    const input = document.getElementById("Inputlado1");
+    const valuelado1 = parseInt(input.value);
+
+    const input2 = document.getElementById("Inputlado2");
+    const valuelado2 = parseInt(input2.value);
+
+    const input3 = document.getElementById("Inputbase");
+    const valuebase = parseInt(input3.value);
+
+    const perimetrot = perimetroTriangulo(valuelado1,valuelado2,valuebase);
+    alert(perimetrot);
 }
 
-function calcularAreaCuadrado(){
-    const input = document.getElementById("InputCuadrado");
-    const value = input.value;
+function calcularAreaTriangulo(){
+    const input = document.getElementById("Inputbase");
+    const valuebase = parseInt(input.value);
 
-    const perimetro = AreaCuadrado(value);
-    alert(perimetro);
-}
+    const inputhigh = document.getElementById("Inputaltura");
+    const valuealtura = parseInt(inputhigh.value);
+
+    const areat = AreaTriangulo(valuebase,valuealtura);
+    alert(areat);
+} 
+
 // Circulo
-function calcularPerimetroCuadrado(){
-    const input = document.getElementById("InputCuadrado");
-    const value = input.value;
 
-    const perimetro = perimetroCuadrado(value);
+function calcularPerimetroCirculo(){
+    const input = document.getElementById("InputCirculo");
+    const value = input.value;
+    
+    const perimetro = perimetroCirculo(value);
     alert(perimetro);
 }
 
-function calcularAreaCuadrado(){
-    const input = document.getElementById("InputCuadrado");
+function calcularAreaCirculo(){
+    const input = document.getElementById("InputCirculo");
     const value = input.value;
+    
+    const area = AreaCirculo(value);
+    alert(area);
+} 
 
-    const perimetro = AreaCuadrado(value);
-    alert(perimetro);
+//Isosceles
+
+function calcularAlturaIsosceles(){
+    const inputl = document.getElementById("Inputladoigual");
+    const valueladoigual = inputl.value;
+
+    const inputb = document.getElementById("InputbaseI");
+    const valuebase = inputb.value;
+
+    const Altura = isoscelesHigh(valueladoigual,valuebase);
+    alert(Altura);
 }
